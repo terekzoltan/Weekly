@@ -15,7 +15,7 @@ export function SummaryBlock({ block, allBlocks }: SummaryBlockProps) {
 
     // Stale check logic
     let isStale = false;
-    let generatedAt = block.data?.generatedAt ? new Date(block.data.generatedAt) : null;
+    let generatedAt = block.data?.generatedAt ? new Date(block.data.generatedAt as string | number) : null;
 
     if (generatedAt) {
         const lastUpdate = allBlocks
