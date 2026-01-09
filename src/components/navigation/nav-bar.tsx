@@ -92,7 +92,7 @@ function CalendarPicker() {
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0" align="end">
                 <Calendar
-                    mode="single"
+
                     selected={date}
                     onSelect={(d: Date | undefined) => {
                         if (d) {

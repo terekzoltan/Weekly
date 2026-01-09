@@ -58,7 +58,7 @@ export const BlockSchema = z.object({
     title: z.string().optional(),
     content: z.string().optional(),
     items: z.array(ContentBlockSchema).optional(),
-    data: z.record(z.any()).optional(),
+    data: z.record(z.string(), z.any()).optional(),
     searchText: z.string().optional(), // New field for normalized search text
     createdAt: z.string(),
     updatedAt: z.string(),

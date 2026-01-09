@@ -72,10 +72,10 @@ export function SummaryBlock({ block, allBlocks }: SummaryBlockProps) {
                 <div className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/90">
                     {block.content}
                 </div>
-                {block.data?.model && (
+                {!!block.data?.model && (
                     <div className="flex items-center justify-end gap-2 mt-4 pt-3 border-t border-border/20">
                         <span className="text-[10px] text-muted-foreground/50 font-mono bg-muted/30 px-2 py-0.5 rounded">
-                            {block.data.provider} / {block.data.model}
+                            {String(block.data.provider)} / {String(block.data.model)}
                         </span>
                     </div>
                 )}
