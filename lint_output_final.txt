@@ -1,0 +1,32 @@
+
+> weekly-app@0.1.0 lint
+> eslint
+
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\day\[date]\page.tsx
+  14:10  warning  'Block' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\search\page.tsx
+  13:10  warning  'DailyHabits' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\stats\page.tsx
+  5:10  warning  'Block' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\components\blocks\daily-habits.tsx
+  49:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\components\blocks\daily-journal.tsx
+  3:31  warning  'useCallback' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\db\backup-service.ts
+  2:10  warning  'Block' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\db\db.ts
+  27:54  warning  '_trans' is defined but never used  @typescript-eslint/no-unused-vars
+  33:69  warning  '_trans' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\utils\date-utils.ts
+  37:14  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 9 problems (1 error, 8 warnings)
+

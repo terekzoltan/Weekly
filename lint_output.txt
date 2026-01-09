@@ -1,0 +1,68 @@
+
+> weekly-app@0.1.0 lint
+> eslint
+
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\day\[date]\page.tsx
+  14:10  warning  'Block' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\search\page.tsx
+  13:10  warning  'DailyHabits' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  24:13  error    Error: Cannot access variable before it is declared
+
+`performSearch` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\search\page.tsx:24:13
+  22 |     useEffect(() => {
+  23 |         const timer = setTimeout(() => {
+> 24 |             performSearch(query);
+     |             ^^^^^^^^^^^^^ `performSearch` accessed before it is declared
+  25 |         }, 500);
+  26 |         return () => clearTimeout(timer);
+  27 |     }, [query]);
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\search\page.tsx:29:5
+  27 |     }, [query]);
+  28 |
+> 29 |     const performSearch = async (q: string) => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |         if (!q.trim()) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |             setResults([]);
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         setIsSearching(false);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |     };
+     | ^^^^^^^ `performSearch` is declared here
+  59 |
+  60 |     const getLink = (block: Block) => {
+  61 |         if (block.scope.type === 'day') return `/day/${block.scope.id}`;  react-hooks/immutability
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\app\stats\page.tsx
+   5:10  warning  'Block' is defined but never used         @typescript-eslint/no-unused-vars
+  12:38  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\components\blocks\daily-habits.tsx
+  18:53  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\components\blocks\daily-journal.tsx
+  3:31  warning  'useCallback' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\db\backup-service.ts
+  2:10  warning  'Block' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\db\db.ts
+  21:13  error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  28:53  warning  'trans' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  34:68  warning  'trans' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\utils\date-utils.ts
+  37:14  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\EGYETEM\FUNSTUFF\Weekly\src\lib\utils\search-utils.ts
+  26:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 14 problems (6 errors, 8 warnings)
+
