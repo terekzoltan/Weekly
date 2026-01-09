@@ -140,14 +140,14 @@ export function NavBar({ currentDate, currentWeekId, currentYear }: NavBarProps)
                     </Link>
                 </div>
 
-                {/* Right: Actions */}
-                <div className="flex items-center gap-1">
+                {/* Right: Actions - scrollable on mobile */}
+                <div className="flex items-center gap-1 overflow-x-auto flex-shrink min-w-0">
                     <CalendarPicker />
 
                     <Link href={`/week/${weekId}`}>
                         <Button
                             variant="secondary"
-                            className="gap-2 hover:shadow-soft transition-all duration-200 hover:scale-105 active:scale-95"
+                            className="gap-2 hover:shadow-soft transition-all duration-200 hover:scale-105 active:scale-95 flex-shrink-0"
                         >
                             <CalendarIcon className="h-4 w-4" />
                             <span className="hidden sm:inline">Week</span>
@@ -158,13 +158,16 @@ export function NavBar({ currentDate, currentWeekId, currentYear }: NavBarProps)
                         <span className="font-bold text-xs">{year}</span>
                     </NavIconButton>
 
-                    <NavIconButton href="/search" title="Search">
-                        <Search className="h-4 w-4" />
-                    </NavIconButton>
+                    {/* Hide search and AI on very small screens */}
+                    <div className="hidden min-[400px]:flex items-center gap-1">
+                        <NavIconButton href="/search" title="Search">
+                            <Search className="h-4 w-4" />
+                        </NavIconButton>
 
-                    <NavIconButton href="/ask" title="Ask AI">
-                        <Sparkles className="h-4 w-4" />
-                    </NavIconButton>
+                        <NavIconButton href="/ask" title="Ask AI">
+                            <Sparkles className="h-4 w-4" />
+                        </NavIconButton>
+                    </div>
 
                     <NavIconButton href="/stats" title="Statistics">
                         <BarChart3 className="h-4 w-4" />
@@ -174,7 +177,7 @@ export function NavBar({ currentDate, currentWeekId, currentYear }: NavBarProps)
                         <Settings className="h-4 w-4" />
                     </NavIconButton>
 
-                    <div className="flex items-center ml-1 pl-1 border-l border-border/50">
+                    <div className="flex items-center ml-1 pl-1 border-l border-border/50 flex-shrink-0">
                         <ThemeToggle />
                         <AiStatusIndicator />
                     </div>

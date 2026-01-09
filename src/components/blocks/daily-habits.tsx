@@ -50,7 +50,7 @@ export function DailyHabits({ block }: DailyHabitsProps) {
                         <span className="w-6 h-px bg-gradient-to-r from-primary/50 to-transparent"></span>
                         Alvás
                     </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="space-y-1.5">
                             <Label htmlFor="bedtime" className="text-xs text-muted-foreground">Fekvés</Label>
                             <Input
@@ -141,7 +141,7 @@ export function DailyHabits({ block }: DailyHabitsProps) {
                         <span className="w-6 h-px bg-gradient-to-r from-primary/50 to-transparent"></span>
                         Értékelés
                     </h4>
-                    <div className="grid grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 min-[400px]:grid-cols-3 gap-4">
                         <div className="space-y-1.5">
                             <Label htmlFor="prog" className="text-xs text-muted-foreground">Prog (0-10)</Label>
                             <Input
