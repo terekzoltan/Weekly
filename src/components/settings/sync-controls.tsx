@@ -120,7 +120,7 @@ export function SyncControls() {
                                     value={otp}
                                     onChange={(e) => setOtp(e.target.value)}
                                     className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 tracking-widest text-center"
-                                    maxLength={6}
+                                    maxLength={8}
                                     onKeyDown={(e) => e.key === 'Enter' && handleVerifyOtp()}
                                 />
                                 <Button onClick={handleVerifyOtp} disabled={loading} size="sm">
